@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*-- Hide the actionbar, when show the title --*/
+        getSupportActionBar().hide();
 
         Button btnAdd = findViewById(R.id.btnAdd);
 

@@ -9,9 +9,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </TableLayout>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:text="ADD"
         android:id="@+id/btnAdd"/>
 
