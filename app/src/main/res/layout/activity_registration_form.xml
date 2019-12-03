@@ -8,39 +8,44 @@
     android:orientation="vertical"
     tools:context=".RegistrationFormActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:gravity="center"
+        android:text="Registration Form"
+        android:padding="10dp"
+        android:id="@+id/title"
+        android:textSize="20sp" />
+
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingTop="60dp">
 
-        <TableRow
-            android:id="@+id/row1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:gravity="center">
+<!--        <TableRow-->
+<!--            android:id="@+id/row1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingBottom="10dp"-->
+<!--            android:gravity="center">-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_span="2"
-                android:text="Registration Form"
-                android:textSize="20sp" />
-        </TableRow>
+<!--            -->
+<!--        </TableRow>-->
 
         <TableRow
             android:id="@+id/row2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Employee Fist Name"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/firstName"
@@ -49,7 +54,7 @@
                 android:layout_weight="1"
                 android:background="#ddd"
                 android:hint="first name"
-                android:padding="6dp" />
+                android:padding="4dp" />
         </TableRow>
 
         <TableRow
@@ -57,14 +62,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Employee Last Name"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/lastName"
@@ -73,7 +78,7 @@
                 android:layout_weight="1"
                 android:background="#ddd"
                 android:hint="last name"
-                android:padding="6dp" />
+                android:padding="4dp" />
         </TableRow>
 
         <TableRow
@@ -81,14 +86,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Employee Birth Year"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/birthYear"
@@ -97,7 +102,7 @@
                 android:layout_weight="1"
                 android:background="#ddd"
                 android:hint="birth year"
-                android:padding="6dp" />
+                android:padding="4dp" />
         </TableRow>
 
         <TableRow
@@ -105,14 +110,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Monthly Salary"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/monthlySalary"
@@ -121,7 +126,7 @@
                 android:layout_weight="1"
                 android:background="#ddd"
                 android:hint="monthly salary"
-                android:padding="6dp" />
+                android:padding="4dp" />
         </TableRow>
 
         <TableRow
@@ -129,14 +134,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Occupation Rate"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/occupationRate"
@@ -145,7 +150,7 @@
                 android:layout_weight="1"
                 android:background="#ddd"
                 android:hint="occupation rate"
-                android:padding="6dp" />
+                android:padding="4dp" />
         </TableRow>
 
         <TableRow
@@ -153,14 +158,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Employee ID"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/employeeId"
@@ -170,7 +175,7 @@
                 android:background="#ddd"
                 android:hint="employee id"
                 android:inputType="number"
-                android:padding="6dp" />
+                android:padding="4dp" />
         </TableRow>
 
         <TableRow
@@ -178,14 +183,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Employee Type"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <Spinner
                 android:layout_width="wrap_content"
@@ -198,15 +203,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:visibility="gone"
+            android:padding="4dp">
 
             <TextView
                 android:id="@+id/txtNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="#number"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/number"
@@ -216,7 +222,7 @@
                 android:background="#ddd"
                 android:hint="number"
                 android:inputType="number"
-                android:padding="6dp" />
+                android:padding="4dp" />
         </TableRow>
 
         <TableRow
@@ -224,14 +230,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Vehicle"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <RadioGroup android:layout_weight="1">
 
@@ -259,15 +265,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="4dp"
             android:visibility="visible">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Car Type"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/carType"
@@ -277,7 +283,7 @@
                 android:background="#ddd"
                 android:hint="Car Type"
                 android:inputType="number"
-                android:padding="6dp" />
+                android:padding="4dp" />
         </TableRow>
 
         <TableRow
@@ -285,15 +291,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="4dp"
             android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Side Car"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <RadioGroup android:layout_weight="1">
 
@@ -321,14 +327,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Vehicle Model"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/model"
@@ -337,7 +343,7 @@
                 android:layout_weight="1"
                 android:background="#ddd"
                 android:hint="Model"
-                android:padding="6dp" />
+                android:padding="4dp" />
         </TableRow>
 
         <TableRow
@@ -345,14 +351,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Plate Number"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/plateNumber"
@@ -361,7 +367,7 @@
                 android:layout_weight="1"
                 android:background="#ddd"
                 android:hint="plate number"
-                android:padding="6dp" />
+                android:padding="4dp" />
         </TableRow>
 
         <TableRow
@@ -369,14 +375,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="5dp">
+            android:padding="4dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="4dp"
                 android:text="Vehicle Color"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <Spinner
                 android:layout_width="wrap_content"
