@@ -10,5 +10,9 @@ public class ResultDescriptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_description);
+
+        /*-- Hide the actionbar, when show the title --*/
+        getSupportActionBar().hide();
+
     }
 }
