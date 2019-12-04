@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|center"
         android:gravity="center"
-        android:text="Registration Form"
+        android:text="@string/registration_form"
         android:padding="10dp"
         android:id="@+id/title"
         android:textSize="20sp" />
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Employee Fist Name"
+                android:text="@string/employee_fist_name"
                 android:textSize="15sp" />
 
             <EditText
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ddd"
-                android:hint="first name"
+                android:hint="@string/first_name"
                 android:padding="4dp" />
         </TableRow>
 
@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Employee Last Name"
+                android:text="@string/employee_last_name"
                 android:textSize="15sp" />
 
             <EditText
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ddd"
-                android:hint="last name"
+                android:hint="@string/last_name"
                 android:padding="4dp" />
         </TableRow>
 
@@ -92,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Employee Birth Year"
+                android:text="@string/employee_birth_year"
                 android:textSize="15sp" />
 
             <EditText
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ddd"
-                android:hint="birth year"
+                android:hint="@string/birth_year"
                 android:padding="4dp" />
         </TableRow>
 
@@ -116,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Monthly Salary"
+                android:text="@string/monthly_salary"
                 android:textSize="15sp" />
 
             <EditText
@@ -125,7 +125,7 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:background="#ddd"
-                android:hint="monthly salary"
+                android:hint="@string/monthly_salary"
                 android:padding="4dp" />
         </TableRow>
 
@@ -140,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Occupation Rate"
+                android:text="@string/occupation_rate"
                 android:textSize="15sp" />
 
             <EditText
@@ -149,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ddd"
-                android:hint="occupation rate"
+                android:hint="@string/occupation_rate"
                 android:padding="4dp" />
         </TableRow>
 
@@ -164,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Employee ID"
+                android:text="@string/employee_id"
                 android:textSize="15sp" />
 
             <EditText
@@ -173,7 +173,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ddd"
-                android:hint="employee id"
+                android:hint="@string/employee_id"
                 android:inputType="number"
                 android:padding="4dp" />
         </TableRow>
@@ -189,7 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Employee Type"
+                android:text="@string/employee_type"
                 android:textSize="15sp" />
 
             <Spinner
@@ -212,7 +212,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="#number"
+                android:text="@string/sharp_number"
                 android:textSize="15sp" />
 
             <EditText
@@ -221,7 +221,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ddd"
-                android:hint="number"
+                android:hint="@string/number"
                 android:inputType="number"
                 android:padding="4dp" />
         </TableRow>
@@ -237,7 +237,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Vehicle"
+                android:text="@string/vehicle"
                 android:textSize="15sp" />
 
             <RadioGroup android:layout_weight="1">
@@ -251,12 +251,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="20dp"
-                        android:text="Car" />
+                        android:text="@string/car" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Motorbike" />
+                        android:text="@string/motorbike" />
                 </LinearLayout>
             </RadioGroup>
         </TableRow>
@@ -273,7 +273,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Car Type"
+                android:text="@string/car_type"
                 android:textSize="15sp" />
 
             <EditText
@@ -282,7 +282,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ddd"
-                android:hint="Car Type"
+                android:hint="@string/car_type"
                 android:inputType="number"
                 android:padding="4dp" />
         </TableRow>
@@ -299,7 +299,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Side Car"
+                android:text="@string/side_car"
                 android:textSize="15sp" />
 
             <RadioGroup android:layout_weight="1">
@@ -313,12 +313,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="20dp"
-                        android:text="Yes" />
+                        android:text="@string/yes" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="@string/no" />
                 </LinearLayout>
             </RadioGroup>
         </TableRow>
@@ -334,7 +334,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Vehicle Model"
+                android:text="@string/vehicle_model"
                 android:textSize="15sp" />
 
             <EditText
@@ -343,7 +343,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ddd"
-                android:hint="Model"
+                android:hint="@string/model"
                 android:padding="4dp" />
         </TableRow>
 
@@ -358,7 +358,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Plate Number"
+                android:text="@string/plate_number"
                 android:textSize="15sp" />
 
             <EditText
@@ -367,7 +367,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ddd"
-                android:hint="plate number"
+                android:hint="@string/plate_number"
                 android:padding="4dp" />
         </TableRow>
 
@@ -382,7 +382,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="Vehicle Color"
+                android:text="@string/vehicle_color"
                 android:textSize="15sp" />
 
             <Spinner
@@ -397,6 +397,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:text="Register"
+        android:text="@string/register"
         android:layout_gravity="bottom" />
 </FrameLayout>

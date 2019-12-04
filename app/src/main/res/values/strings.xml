@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ProjectAndroid - Employee Registration</string>
-    
-<!-- Employee Positions -->
+
+    <!-- Employee Positions -->
     <string name="tester">Tester</string>
     <string name="manager">Manager</string>
     <string name="programmer">Programmer</string>
@@ -26,6 +26,7 @@
     <string name="white">White</string>
     <string name="black">Black</string>
     <string name="beige">Beige</string>
+
     <string-array name="colors">
         <item>@string/chooseColor</item>
         <item>@string/red</item>
@@ -40,5 +41,32 @@
         <item>@string/black</item>
         <item>@string/beige</item>
     </string-array>
-    
+
+    <!-- Strings for Layout -->
+    <string name="register">Register</string>
+    <string name="vehicle_color">Vehicle Color</string>
+    <string name="plate_number">Plate Number</string>
+    <string name="model">Model</string>
+    <string name="vehicle_model">Vehicle Model</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="side_car">Side Car</string>
+    <string name="car_type">Car Type</string>
+    <string name="motorbike">Motorbike</string>
+    <string name="car">Car</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="number">number</string>
+    <string name="sharp_number">#number</string>
+    <string name="employee_type">Employee Type</string>
+    <string name="employee_id">Employee ID</string>
+    <string name="occupation_rate">Occupation Rate</string>
+    <string name="monthly_salary">Monthly Salary</string>
+    <string name="birth_year">Birth Year</string>
+    <string name="employee_birth_year">Employee Birth Year</string>
+    <string name="last_name">Last Name</string>
+    <string name="employee_last_name">Employee Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="employee_fist_name">Employee Fist Name</string>
+    <string name="registration_form">Registration Form</string>
+
 </resources>
