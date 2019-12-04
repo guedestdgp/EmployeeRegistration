@@ -15,5 +15,30 @@
    
     <!-- Colors -->
     <string name="chooseColor">Choose a Color</string>
+    <string name="red">Red</string>
+    <string name="blue">Blue</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
+    <string name="orange">Orange</string>
+    <string name="purple">Purple</string>
+    <string name="pink">Pink</string>
+    <string name="brown">Brown</string>
+    <string name="white">White</string>
+    <string name="black">Black</string>
+    <string name="beige">Beige</string>
+    <string-array name="colors">
+        <item>@string/chooseColor</item>
+        <item>@string/red</item>
+        <item>@string/blue</item>
+        <item>@string/yellow</item>
+        <item>@string/green</item>
+        <item>@string/orange</item>
+        <item>@string/purple</item>
+        <item>@string/pink</item>
+        <item>@string/brown</item>
+        <item>@string/white</item>
+        <item>@string/black</item>
+        <item>@string/beige</item>
+    </string-array>
     
 </resources>
