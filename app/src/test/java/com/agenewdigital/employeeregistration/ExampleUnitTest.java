@@ -1,4 +1,4 @@
-package com.example.employeeregistration;
+package com.agenewdigital.employeeregistration;
 
 import org.junit.Test;
 

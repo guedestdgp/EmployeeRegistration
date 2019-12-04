@@ -10,53 +10,13 @@ abstract class Employee {
 
     abstract void toDisplay();
 
-    Employee(int employeeId) {
+    Employee(int employeeId, String name, int age, int birthYear, double monthlySalary) {
         this.employeeId = employeeId;
-        rate = 100;
-    }
-
-    public int getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
         this.age = age;
-    }
-
-    public int getBirthYear() {
-        return birthYear;
-    }
-
-    public void setBirthYear(int birthYear) {
         this.birthYear = birthYear;
-    }
-
-    public double getMonthlySalary() {
-        return monthlySalary;
-    }
-
-    public void setMonthlySalary(double monthlySalary) {
         this.monthlySalary = monthlySalary;
-    }
-
-    public int getRate() {
-        return rate;
+        rate = 100;
     }
 
     public void setRate(int rate) {

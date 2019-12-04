@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.employeeregistration">
+    package="com.agenewdigital.employeeregistration">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultDescriptionActivity"></activity>
-        <activity android:name=".RegistrationFormActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.agenewdigital.employeeregistration.ResultDescriptionActivity"></activity>
+        <activity android:name="com.agenewdigital.employeeregistration.RegistrationFormActivity" />
+        <activity android:name="com.agenewdigital.employeeregistration.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

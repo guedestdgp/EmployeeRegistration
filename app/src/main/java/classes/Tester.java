@@ -9,21 +9,14 @@ public class Tester extends Employee {
         gain_factor_error = 10;
     }
 
-    protected Tester(int employeeId) {
-        super(employeeId);
+    protected Tester(int employeeId, int nbBugs) {
+        super(employeeId, name, age, birthYear, monthlySalary);
+        this.nbBugs = nbBugs;
     }
 
     @Override
     void toDisplay() {
 
-    }
-
-    public int getNbBugs() {
-        return nbBugs;
-    }
-
-    public void setNbBugs(int nbBugs) {
-        this.nbBugs = nbBugs;
     }
 
     public int getGain_factor_error() {

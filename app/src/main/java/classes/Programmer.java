@@ -9,21 +9,14 @@ public class Programmer extends Employee {
         gain_factor_project = 200;
     }
 
-    protected Programmer(int employeeId) {
-        super(employeeId);
+    protected Programmer(int employeeId, int nbProjects) {
+        super(employeeId, name, age, birthYear, monthlySalary);
+        this.nbProjects = nbProjects;
     }
 
     @Override
     void toDisplay() {
 
-    }
-
-    public int getNbProjects() {
-        return nbProjects;
-    }
-
-    public void setNbProjects(int nbProjects) {
-        this.nbProjects = nbProjects;
     }
 
     public int getGain_factor_project() {

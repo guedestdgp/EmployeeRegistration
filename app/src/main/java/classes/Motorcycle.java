@@ -3,20 +3,13 @@ package classes;
 public class Motorcycle extends Vehicle {
     private Boolean sidecar;
 
-    protected Motorcycle(int vehicleId) {
+    protected Motorcycle(int vehicleId, Boolean sidecar) {
         super(vehicleId);
+        this.sidecar = sidecar;
     }
 
     @Override
     void toDisplay() {
 
-    }
-
-    public Boolean getSidecar() {
-        return sidecar;
-    }
-
-    public void setSidecar(Boolean sidecar) {
-        this.sidecar = sidecar;
     }
 }

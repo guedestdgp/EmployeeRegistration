@@ -1,4 +1,4 @@
-package com.example.employeeregistration;
+package com.agenewdigital.employeeregistration;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.TableRow;
-import android.widget.Toast;
 
 /*--- Tatiane's Project - C0755772 ---*/
 public class RegistrationFormActivity extends AppCompatActivity {

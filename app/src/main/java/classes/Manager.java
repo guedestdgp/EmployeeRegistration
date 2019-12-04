@@ -15,21 +15,14 @@ public class Manager extends Employee {
         gain_factor_travel = 100;
     }
 
-    protected Manager(int employeeId) {
-        super(employeeId);
+    protected Manager(int employeeId, int nbClients) {
+        super(employeeId, name, age, birthYear, monthlySalary);
+        this.nbClients = nbClients;
     }
 
     @Override
     void toDisplay() {
 
-    }
-
-    public int getNbClients() {
-        return nbClients;
-    }
-
-    public void setNbClients(int nbClients) {
-        this.nbClients = nbClients;
     }
 
     public int getGain_factor_travel() {
