@@ -263,7 +263,7 @@
                     android:orientation="horizontal">
 
                     <RadioButton
-                        android:id="@+id/car"
+                        android:id="@+id/car_rb"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
@@ -274,7 +274,7 @@
                         tools:ignore="RtlSymmetry" />
 
                     <RadioButton
-                        android:id="@+id/motorbike"
+                        android:id="@+id/motorbike_rb"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="vehicleChecked"

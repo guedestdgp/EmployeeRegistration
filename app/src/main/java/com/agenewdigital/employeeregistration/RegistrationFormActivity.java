@@ -22,12 +22,13 @@ public class RegistrationFormActivity extends AppCompatActivity {
         TableRow rowMotorbike = findViewById(R.id.rowMotorbike);
         int id = radioGroup.getCheckedRadioButtonId();
         switch (id) {
-            case R.id.car:
+            case R.id.car_rb:
                 rowCar.setVisibility(View.VISIBLE);
                 rowMotorbike.setVisibility(View.GONE);
-            case R.id.motorbike:
-                rowCar.setVisibility(View.GONE);
+                break;
+            case R.id.motorbike_rb:
                 rowMotorbike.setVisibility(View.VISIBLE);
+                rowCar.setVisibility(View.GONE);
         }
     }
 }
