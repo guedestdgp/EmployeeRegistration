@@ -25,4 +25,8 @@ public class Tester extends Employee {
     public void setNbBugs(int nbBugs) {
         this.nbBugs = nbBugs;
     }
+
+    public int getGain_factor_error() {
+        return gain_factor_error;
+    }
 }

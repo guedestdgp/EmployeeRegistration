@@ -31,4 +31,12 @@ public class Manager extends Employee {
     public void setNbClients(int nbClients) {
         this.nbClients = nbClients;
     }
+
+    public int getGain_factor_travel() {
+        return gain_factor_travel;
+    }
+
+    public int getGain_factor_client() {
+        return gain_factor_client;
+    }
 }

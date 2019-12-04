@@ -25,4 +25,8 @@ public class Programmer extends Employee {
     public void setNbProjects(int nbProjects) {
         this.nbProjects = nbProjects;
     }
+
+    public int getGain_factor_project() {
+        return gain_factor_project;
+    }
 }
