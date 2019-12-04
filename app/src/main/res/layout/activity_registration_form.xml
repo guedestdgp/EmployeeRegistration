@@ -256,29 +256,34 @@
                     android:text="@string/vehicle"
                     android:textSize="15sp" />
 
-                <RadioGroup android:layout_weight="1">
+                <RadioGroup
+                    android:id="@+id/rg_vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
 
-                    <LinearLayout
+                    <RadioButton
+                        android:id="@+id/car"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:checked="true"
+                        android:onClick="vehicleChecked"
+                        android:paddingEnd="25dp"
+                        android:paddingRight="25dp"
+                        android:text="@string/car"
+                        tools:ignore="RtlSymmetry" />
 
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingRight="20dp"
-                            android:text="@string/car" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/motorbike" />
-                    </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/motorbike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="vehicleChecked"
+                        android:text="@string/motorbike" />
                 </RadioGroup>
             </TableRow>
 
             <TableRow
-                android:id="@+id/row11"
+                android:id="@+id/rowCar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -304,7 +309,7 @@
             </TableRow>
 
             <TableRow
-                android:id="@+id/row12"
+                android:id="@+id/rowMotorbike"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
