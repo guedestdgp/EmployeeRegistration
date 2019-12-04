@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">ProjectAndroid - Employee Registration</string>
+    
+<!-- Employee Positions -->
+    <string name="tester">Tester</string>
+    <string name="manager">Manager</string>
+    <string name="programmer">Programmer</string>
+    <string name="chooseType">Choose a Type</string>
+    <string-array name="employees">
+        <item>@string/chooseType</item>
+        <item>@string/manager</item>
+        <item>@string/tester</item>
+        <item>@string/programmer</item>
+    </string-array>
+   
+    <!-- Colors -->
+    <string name="chooseColor">Choose a Color</string>
+    
 </resources>
