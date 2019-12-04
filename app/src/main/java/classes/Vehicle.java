@@ -9,7 +9,7 @@ abstract class Vehicle {
 
     abstract void toDisplay();
 
-    protected Vehicle(int vehicleId) {
+    Vehicle(int vehicleId) {
         this.vehicleId = vehicleId;
     }
 
