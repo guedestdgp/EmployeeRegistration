@@ -1,16 +1,16 @@
 package classes;
 
 abstract class Employee {
-    private int employeeId;
-    private String name;
-    private int age;
-    private int birthYear;
-    private double monthlySalary;
-    private int rate;
+    protected int employeeId;
+    protected String name;
+    protected int age;
+    protected int birthYear;
+    protected double monthlySalary;
+    protected int rate;
 
     abstract void toDisplay();
 
-    Employee(int employeeId, String name, int age, int birthYear, double monthlySalary) {
+    protected Employee(int employeeId, String name, int age, int birthYear, double monthlySalary) {
         this.employeeId = employeeId;
         this.name = name;
         this.age = age;

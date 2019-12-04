@@ -9,7 +9,7 @@ public class Programmer extends Employee {
         gain_factor_project = 200;
     }
 
-    protected Programmer(int employeeId, int nbProjects) {
+    protected Programmer(int employeeId, String name, int age, int birthYear, double monthlySalary, int nbProjects) {
         super(employeeId, name, age, birthYear, monthlySalary);
         this.nbProjects = nbProjects;
     }
