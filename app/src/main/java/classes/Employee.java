@@ -1,12 +1,12 @@
 package classes;
 
-abstract class Employee {
-    protected int employeeId;
-    protected String name;
-    protected int age;
-    protected int birthYear;
-    protected double monthlySalary;
-    protected int rate;
+public abstract class Employee {
+    private static int employeeId;
+    private static String name;
+    private static int age;
+    private static int birthYear;
+    private static double monthlySalary;
+    private static int rate;
 
     abstract void toDisplay();
 

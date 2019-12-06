@@ -3,8 +3,11 @@
 
     <!-- Employee Positions -->
     <string name="tester">Tester</string>
+    <string name="number_bugs"># bugs</string>
     <string name="manager">Manager</string>
+    <string name="number_clients"># clients</string>
     <string name="programmer">Programmer</string>
+    <string name="number_projects"># projects</string>
     <string name="chooseType">Choose a Type</string>
     <string-array name="employees">
         <item>@string/chooseType</item>
