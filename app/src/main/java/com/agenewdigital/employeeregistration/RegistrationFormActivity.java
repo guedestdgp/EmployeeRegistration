@@ -15,14 +15,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
+import classes.Car;
 import classes.Employee;
+import classes.Manager;
 
 /*--- Tatiane's Project - C0755772 ---*/
 public class RegistrationFormActivity extends AppCompatActivity {
 
     /* Locals */
-    private static ArrayList<Employee> employees;
+    private static ArrayList<Employee> employees = new ArrayList<>();
     String[] strings_employeesTypes;
     private String message;
 
@@ -124,7 +127,21 @@ public class RegistrationFormActivity extends AppCompatActivity {
                 if (isEmptyField())
                     Toast.makeText(RegistrationFormActivity.this, message, Toast.LENGTH_LONG).show();
                 else {
-
+                    Car car = null;
+                    int age = Calendar.YEAR / Integer.valueOf(etBirthYear.getText().toString());
+                    /* Manager
+                    * int employeeId, String firstName, String lastName, int age, int birthYear,
+                    * double monthlySalary, int nbClients
+                    * */
+                    employees.add(new Manager(Integer.valueOf(etEmployeeId.getText().toString()),
+                            etFirstName.getText().toString(),
+                            etLastName.getText().toString(), age,
+                            Integer.valueOf(etBirthYear.getText().toString()),
+                            Double.valueOf(etMonthlySalary.getText().toString()),
+                            Integer.valueOf(etNumber.getText().toString()), car));
+                    //Vehicle
+                    //Programmer
+                    //Tester
                 }
 
             }

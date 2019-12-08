@@ -9,8 +9,8 @@ public class Tester extends Employee {
         gain_factor_error = 10;
     }
 
-    protected Tester(int employeeId, String name, int age, int birthYear, double monthlySalary, int nbBugs) {
-        super(employeeId, name, age, birthYear, monthlySalary, vehicle);
+    protected Tester(int employeeId, String firstName, String lastName, int age, int birthYear, double monthlySalary, int nbBugs, Vehicle vehicleId) {
+        super(employeeId, firstName, lastName, age, birthYear, monthlySalary, vehicleId);
         this.nbBugs = nbBugs;
     }
 

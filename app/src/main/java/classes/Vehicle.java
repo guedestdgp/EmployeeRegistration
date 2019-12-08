@@ -1,13 +1,13 @@
 package classes;
 
 abstract class Vehicle {
-    protected int vehicleId;
-    protected String make;
-    protected String plate;
-    protected String color;
-    protected String category;
+    private int vehicleId;
+    private String make;
+    private String plate;
+    private String color;
+    private String category;
 
-    protected Vehicle(int vehicleId, String make, String plate, String color, String category) {
+    Vehicle(int vehicleId, String make, String plate, String color, String category) {
         this.vehicleId = vehicleId;
         this.make = make;
         this.plate = plate;
