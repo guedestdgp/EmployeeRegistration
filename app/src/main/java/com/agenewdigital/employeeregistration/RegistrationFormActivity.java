@@ -3,13 +3,16 @@ package com.agenewdigital.employeeregistration;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,15 +21,15 @@ import classes.Employee;
 /*--- Tatiane's Project - C0755772 ---*/
 public class RegistrationFormActivity extends AppCompatActivity {
 
-//    private static Employee employee;
-
+    /* Locals */
     private static ArrayList<Employee> employees;
-
     String[] strings_employeesTypes;
+    private String message;
 
     Spinner employeeType;
     TableRow row_employee_type;
     TextView txtNumber;
+    String number_showed;
 
     /*
     * Fields to save data
@@ -46,7 +49,10 @@ public class RegistrationFormActivity extends AppCompatActivity {
     EditText etPlateNumber;
     Spinner spChoseColor;
 
-
+    /*
+    * Button Register
+    * */
+    Button btRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,17 +76,22 @@ public class RegistrationFormActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String type = strings_employeesTypes[position];
-                if (type.equals(getResources().getString(R.string.chooseType)))
+                if (type.equals(getResources().getString(R.string.chooseType))) {
                     row_employee_type.setVisibility(View.GONE);
+                    number_showed = getResources().getString(R.string.chooseType);
+                }
                 else if (type.equals(getResources().getString(R.string.manager))) {
                     row_employee_type.setVisibility(View.VISIBLE);
                     txtNumber.setText(getResources().getString(R.string.number_clients));
+                    number_showed = getResources().getString(R.string.number_clients);
                 }  else if (type.equals(getResources().getString(R.string.programmer))){
                     row_employee_type.setVisibility(View.VISIBLE);
                     txtNumber.setText(getResources().getString(R.string.number_projects));
+                    number_showed = getResources().getString(R.string.programmer);
                 } else {
                     row_employee_type.setVisibility(View.VISIBLE);
                     txtNumber.setText(getResources().getString(R.string.number_bugs));
+                    number_showed = getResources().getString(R.string.number_bugs);
                 }
             }
 
@@ -105,6 +116,54 @@ public class RegistrationFormActivity extends AppCompatActivity {
         etVehicleModel = findViewById(R.id.model);
         etPlateNumber = findViewById(R.id.plateNumber);
         spChoseColor = findViewById(R.id.spinner_color);
+        btRegister = findViewById(R.id.btRegister);
+
+        btRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isEmptyField())
+                    Toast.makeText(RegistrationFormActivity.this, message, Toast.LENGTH_LONG).show();
+                else {
+
+                }
+
+            }
+        });
+    }
+
+    public boolean isEmptyField(){
+        if (etFirstName.getText().toString().isEmpty()) {
+            message = "Provide first name";
+            return true;
+        } else if (etLastName.getText().toString().isEmpty()) {
+            message = "Provide last name";
+            return true;
+        } else if (etBirthYear.getText().toString().isEmpty()) {
+            message = "Provide Birth Year";
+            return true;
+        } else if (etMonthlySalary.getText().toString().isEmpty()) {
+            message = "Provide Monthly Salary";
+            return true;
+        } else if (etEmployeeId.getText().toString().isEmpty()) {
+            message = "Provide Employee ID";
+            return true;
+        } else if (etNumber.getText().toString().isEmpty()) {
+            message = "Provide " + number_showed;
+            return true;
+        } else if (etCarType.getText().toString().isEmpty()) {
+            message = "Provide Car Type";
+            return true;
+        } else if (etVehicleModel.getText().toString().isEmpty()) {
+            message = "Provide Vehicle Model";
+            return true;
+        } else if (etPlateNumber.getText().toString().isEmpty()) {
+            message = "Provide Plate Number";
+            return true;
+        } else if (spChoseColor.getSelectedItem() == getResources().getString(R.string.chooseColor)) {
+            message = "Provide Vehicle's Color";
+            return true;
+        } else
+            return false;
     }
 
     public void vehicleChecked(View view){
