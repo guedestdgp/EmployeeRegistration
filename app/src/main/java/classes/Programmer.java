@@ -10,7 +10,7 @@ public class Programmer extends Employee {
     }
 
     protected Programmer(int employeeId, String name, int age, int birthYear, double monthlySalary, int nbProjects) {
-        super(employeeId, name, age, birthYear, monthlySalary);
+        super(employeeId, name, age, birthYear, monthlySalary, vehicle);
         this.nbProjects = nbProjects;
     }
 

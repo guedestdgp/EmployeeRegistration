@@ -16,7 +16,7 @@ public class Manager extends Employee {
     }
 
     protected Manager(int employeeId, String name, int age, int birthYear, double monthlySalary, int nbClients) {
-        super(employeeId, name, age, birthYear, monthlySalary);
+        super(employeeId, name, age, birthYear, monthlySalary, vehicle);
         this.nbClients = nbClients;
     }
 

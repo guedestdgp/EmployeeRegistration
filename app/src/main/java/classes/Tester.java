@@ -10,7 +10,7 @@ public class Tester extends Employee {
     }
 
     protected Tester(int employeeId, String name, int age, int birthYear, double monthlySalary, int nbBugs) {
-        super(employeeId, name, age, birthYear, monthlySalary);
+        super(employeeId, name, age, birthYear, monthlySalary, vehicle);
         this.nbBugs = nbBugs;
     }
 

@@ -1,21 +1,23 @@
 package classes;
 
 public abstract class Employee {
-    private static int employeeId;
-    private static String name;
-    private static int age;
-    private static int birthYear;
-    private static double monthlySalary;
-    private static int rate;
+    private int employeeId;
+    private String name;
+    private int age;
+    private int birthYear;
+    private double monthlySalary;
+    private int rate;
+    private Vehicle vehicle;
 
     abstract void toDisplay();
 
-    protected Employee(int employeeId, String name, int age, int birthYear, double monthlySalary) {
+    protected Employee(int employeeId, String name, int age, int birthYear, double monthlySalary, Vehicle vehicle) {
         this.employeeId = employeeId;
         this.name = name;
         this.age = age;
         this.birthYear = birthYear;
         this.monthlySalary = monthlySalary;
+        this.vehicle = vehicle;
         rate = 100;
     }
 
