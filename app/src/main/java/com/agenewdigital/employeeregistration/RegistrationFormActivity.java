@@ -130,47 +130,50 @@ public class RegistrationFormActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isEmptyField())
                     Toast.makeText(RegistrationFormActivity.this, message, Toast.LENGTH_LONG).show();
-                else {
-                    Car car = null;
-                    Profession employee = null;
-                    int age = Calendar.YEAR / Integer.valueOf(etBirthYear.getText().toString());
-                    int rate = etOccupationRate.getText().toString().isEmpty() ? 100 : Integer.valueOf(etOccupationRate.getText().toString());
-                    /* Manager
-                    * int employeeId, String firstName, String lastName, int age, int birthYear,
-                    * double monthlySalary, int rate, int nbClients, Vehicle vehicleId
-                    * */
-                    switch (profetion) {
-                        case Manager:
-                            employees.add(new Manager(Integer.valueOf(etEmployeeId.getText().toString()),
-                            etFirstName.getText().toString(),
-                            etLastName.getText().toString(), age,
-                            Integer.valueOf(etBirthYear.getText().toString()),
-                            Double.valueOf(etMonthlySalary.getText().toString()),
-                            rate,
-                            Integer.valueOf(etNumber.getText().toString()), car));
-                            break;
-                        case Programmer:
-                            employees.add(new Programmer(Integer.valueOf(etEmployeeId.getText().toString()),
-                                    etFirstName.getText().toString(),
-                                    etLastName.getText().toString(), age,
-                                    Integer.valueOf(etBirthYear.getText().toString()),
-                                    Double.valueOf(etMonthlySalary.getText().toString()),
-                                    rate,
-                                    Integer.valueOf(etNumber.getText().toString()), car));
-                            break;
-                        case Tester:
-                            employees.add(new Tester(Integer.valueOf(etEmployeeId.getText().toString()),
-                                    etFirstName.getText().toString(),
-                                    etLastName.getText().toString(), age,
-                                    Integer.valueOf(etBirthYear.getText().toString()),
-                                    Double.valueOf(etMonthlySalary.getText().toString()),
-                                    rate,
-                                    Integer.valueOf(etNumber.getText().toString()), car));
-                    }
-                }
+                else
+                    setData();
 
             }
         });
+    }
+
+    public void setData() {
+        Car car = null;
+        Profession employee = null;
+        int age = Calendar.YEAR / Integer.valueOf(etBirthYear.getText().toString());
+        int rate = etOccupationRate.getText().toString().isEmpty() ? 100 : Integer.valueOf(etOccupationRate.getText().toString());
+        /* Manager
+         * int employeeId, String firstName, String lastName, int age, int birthYear,
+         * double monthlySalary, int rate, int nbClients, Vehicle vehicleId
+         * */
+        switch (profetion) {
+            case Manager:
+                employees.add(new Manager(Integer.valueOf(etEmployeeId.getText().toString()),
+                        etFirstName.getText().toString(),
+                        etLastName.getText().toString(), age,
+                        Integer.valueOf(etBirthYear.getText().toString()),
+                        Double.valueOf(etMonthlySalary.getText().toString()),
+                        rate,
+                        Integer.valueOf(etNumber.getText().toString()), car));
+                break;
+            case Programmer:
+                employees.add(new Programmer(Integer.valueOf(etEmployeeId.getText().toString()),
+                        etFirstName.getText().toString(),
+                        etLastName.getText().toString(), age,
+                        Integer.valueOf(etBirthYear.getText().toString()),
+                        Double.valueOf(etMonthlySalary.getText().toString()),
+                        rate,
+                        Integer.valueOf(etNumber.getText().toString()), car));
+                break;
+            case Tester:
+                employees.add(new Tester(Integer.valueOf(etEmployeeId.getText().toString()),
+                        etFirstName.getText().toString(),
+                        etLastName.getText().toString(), age,
+                        Integer.valueOf(etBirthYear.getText().toString()),
+                        Double.valueOf(etMonthlySalary.getText().toString()),
+                        rate,
+                        Integer.valueOf(etNumber.getText().toString()), car));
+        }
     }
 
     public boolean isEmptyField(){
