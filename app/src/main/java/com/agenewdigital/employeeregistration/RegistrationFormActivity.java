@@ -161,11 +161,8 @@ public class RegistrationFormActivity extends AppCompatActivity {
                                     etLastName.getText().toString(), age,
                                     Integer.valueOf(etBirthYear.getText().toString()),
                                     Double.valueOf(etMonthlySalary.getText().toString()),
-                                    Integer.valueOf(etNumber.getText().toString()), car));                            
+                                    Integer.valueOf(etNumber.getText().toString()), car));
                     }
-                    //Vehicle
-                    //Programmer
-                    //Tester
                 }
 
             }
@@ -189,7 +186,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
             message = "Provide Employee ID";
             return true;
         } else if (etNumber.getText().toString().isEmpty()) {
-            message = "Provide " + number_showed;
+            message = "Provide " + profetion;
             return true;
         } else if (etCarType.getText().toString().isEmpty()) {
             message = "Provide Car Type";
