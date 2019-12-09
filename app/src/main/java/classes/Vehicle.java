@@ -13,6 +13,17 @@ public abstract class Vehicle implements Serializable {
         this.color = color;
     }
 
-    abstract void toDisplay();
+    public abstract String toDisplay();
 
+    public String getMake() {
+        return make;
+    }
+
+    public String getPlate() {
+        return plate;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }

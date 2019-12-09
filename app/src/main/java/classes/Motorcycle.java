@@ -11,7 +11,11 @@ public class Motorcycle extends Vehicle implements Serializable {
     }
 
     @Override
-    void toDisplay() {
+    public String toDisplay() {
+        return null;
+    }
 
+    public Boolean getSidecar() {
+        return sidecar;
     }
 }

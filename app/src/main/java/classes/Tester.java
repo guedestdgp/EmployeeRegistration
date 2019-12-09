@@ -17,11 +17,15 @@ public class Tester extends Employee implements Serializable {
     }
 
     @Override
-    void toDisplay() {
-
+    public String toDisplay() {
+        return String.format("Name: %s %s\nAge: %d\nEmployee has a %s\nOccupation rate: %d\nAnnual income: %d\nHe/She has corrected %d bugs", this.getFirstName(), this.getLastName(), this.getAge(), this.getVehicle().toDisplay(), this.getRate(), annualIncome(), this.getNbBugs());
     }
 
     public int getGain_factor_error() {
         return gain_factor_error;
+    }
+
+    public int getNbBugs() {
+        return nbBugs;
     }
 }

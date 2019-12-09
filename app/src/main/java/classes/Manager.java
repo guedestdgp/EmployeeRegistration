@@ -23,8 +23,8 @@ public class Manager extends Employee implements Serializable {
     }
 
     @Override
-    void toDisplay() {
-
+    public String toDisplay() {
+        return null;
     }
 
     public int getGain_factor_travel() {

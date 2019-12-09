@@ -12,7 +12,27 @@ public abstract class Employee implements Serializable {
     private int rate;
     private Vehicle vehicle;
 
-    abstract void toDisplay();
+    public int getAge() {
+        return age;
+    }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public double getMonthlySalary() {
+        return monthlySalary;
+    }
+
+    public int getRate() {
+        return rate;
+    }
+
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
+    public abstract String toDisplay();
 
     protected Employee(int employeeId, String firstName, String lastName, int age, int birthYear, double monthlySalary, int rate, Vehicle vehicleId) {
         this.employeeId = employeeId;
@@ -39,5 +59,13 @@ public abstract class Employee implements Serializable {
         /*--- Yearly income computed as 12 times the monthly income
         multiplied by the occupation rate. ---*/
         return 0;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 }

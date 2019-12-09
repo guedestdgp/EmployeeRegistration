@@ -11,7 +11,7 @@ public class Car extends Vehicle implements Serializable {
     }
 
     @Override
-    void toDisplay() {
-
+    public String toDisplay() {
+        return null;
     }
 }
