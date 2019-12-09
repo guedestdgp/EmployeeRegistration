@@ -3,7 +3,6 @@ package com.agenewdigital.employeeregistration;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -16,10 +15,14 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import classes.Car;
 import classes.Employee;
+import Enums.Profession;
 import classes.Manager;
+import classes.Programmer;
+import classes.Tester;
 
 /*--- Tatiane's Project - C0755772 ---*/
 public class RegistrationFormActivity extends AppCompatActivity {
@@ -28,11 +31,12 @@ public class RegistrationFormActivity extends AppCompatActivity {
     private static ArrayList<Employee> employees = new ArrayList<>();
     String[] strings_employeesTypes;
     private String message;
+    private boolean isCar = true;
 
     Spinner employeeType;
     TableRow row_employee_type;
     TextView txtNumber;
-    String number_showed;
+    Profession profetion;
 
     /*
     * Fields to save data
@@ -45,7 +49,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
     EditText etEmployeeId;
     //Spinner was set before.
     EditText etNumber;
-    //RadioButtons were set before.
+    RadioGroup radioGroup;
     //RadioGroup Vehicle Chose and Motorcycle Type.
     EditText etCarType;
     EditText etVehicleModel;
@@ -81,20 +85,20 @@ public class RegistrationFormActivity extends AppCompatActivity {
                 String type = strings_employeesTypes[position];
                 if (type.equals(getResources().getString(R.string.chooseType))) {
                     row_employee_type.setVisibility(View.GONE);
-                    number_showed = getResources().getString(R.string.chooseType);
+                    profetion = Profession.None;
                 }
                 else if (type.equals(getResources().getString(R.string.manager))) {
                     row_employee_type.setVisibility(View.VISIBLE);
                     txtNumber.setText(getResources().getString(R.string.number_clients));
-                    number_showed = getResources().getString(R.string.number_clients);
+                    profetion = Profession.Manager;
                 }  else if (type.equals(getResources().getString(R.string.programmer))){
                     row_employee_type.setVisibility(View.VISIBLE);
                     txtNumber.setText(getResources().getString(R.string.number_projects));
-                    number_showed = getResources().getString(R.string.programmer);
+                    profetion = Profession.Programmer;
                 } else {
                     row_employee_type.setVisibility(View.VISIBLE);
                     txtNumber.setText(getResources().getString(R.string.number_bugs));
-                    number_showed = getResources().getString(R.string.number_bugs);
+                    profetion = Profession.Tester;
                 }
             }
 
@@ -128,17 +132,37 @@ public class RegistrationFormActivity extends AppCompatActivity {
                     Toast.makeText(RegistrationFormActivity.this, message, Toast.LENGTH_LONG).show();
                 else {
                     Car car = null;
+                    Profession employee = null;
                     int age = Calendar.YEAR / Integer.valueOf(etBirthYear.getText().toString());
                     /* Manager
                     * int employeeId, String firstName, String lastName, int age, int birthYear,
                     * double monthlySalary, int nbClients
                     * */
-                    employees.add(new Manager(Integer.valueOf(etEmployeeId.getText().toString()),
+                    switch (profetion) {
+                        case Manager:
+                            employees.add(new Manager(Integer.valueOf(etEmployeeId.getText().toString()),
                             etFirstName.getText().toString(),
                             etLastName.getText().toString(), age,
                             Integer.valueOf(etBirthYear.getText().toString()),
                             Double.valueOf(etMonthlySalary.getText().toString()),
                             Integer.valueOf(etNumber.getText().toString()), car));
+                            break;
+                        case Programmer:
+                            employees.add(new Programmer(Integer.valueOf(etEmployeeId.getText().toString()),
+                                    etFirstName.getText().toString(),
+                                    etLastName.getText().toString(), age,
+                                    Integer.valueOf(etBirthYear.getText().toString()),
+                                    Double.valueOf(etMonthlySalary.getText().toString()),
+                                    Integer.valueOf(etNumber.getText().toString()), car));
+                            break;
+                        case Tester:
+                            employees.add(new Tester(Integer.valueOf(etEmployeeId.getText().toString()),
+                                    etFirstName.getText().toString(),
+                                    etLastName.getText().toString(), age,
+                                    Integer.valueOf(etBirthYear.getText().toString()),
+                                    Double.valueOf(etMonthlySalary.getText().toString()),
+                                    Integer.valueOf(etNumber.getText().toString()), car));                            
+                    }
                     //Vehicle
                     //Programmer
                     //Tester
@@ -190,10 +214,12 @@ public class RegistrationFormActivity extends AppCompatActivity {
         int id = radioGroup.getCheckedRadioButtonId();
         switch (id) {
             case R.id.car_rb:
+                isCar = true;
                 rowCar.setVisibility(View.VISIBLE);
                 rowMotorbike.setVisibility(View.GONE);
                 break;
             case R.id.motorbike_rb:
+                isCar = false;
                 rowMotorbike.setVisibility(View.VISIBLE);
                 rowCar.setVisibility(View.GONE);
         }
