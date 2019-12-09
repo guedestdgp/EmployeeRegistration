@@ -134,9 +134,10 @@ public class RegistrationFormActivity extends AppCompatActivity {
                     Car car = null;
                     Profession employee = null;
                     int age = Calendar.YEAR / Integer.valueOf(etBirthYear.getText().toString());
+                    int rate = etOccupationRate.getText().toString().isEmpty() ? 100 : Integer.valueOf(etOccupationRate.getText().toString());
                     /* Manager
                     * int employeeId, String firstName, String lastName, int age, int birthYear,
-                    * double monthlySalary, int nbClients
+                    * double monthlySalary, int rate, int nbClients, Vehicle vehicleId
                     * */
                     switch (profetion) {
                         case Manager:
@@ -145,6 +146,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
                             etLastName.getText().toString(), age,
                             Integer.valueOf(etBirthYear.getText().toString()),
                             Double.valueOf(etMonthlySalary.getText().toString()),
+                            rate,
                             Integer.valueOf(etNumber.getText().toString()), car));
                             break;
                         case Programmer:
@@ -153,6 +155,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
                                     etLastName.getText().toString(), age,
                                     Integer.valueOf(etBirthYear.getText().toString()),
                                     Double.valueOf(etMonthlySalary.getText().toString()),
+                                    rate,
                                     Integer.valueOf(etNumber.getText().toString()), car));
                             break;
                         case Tester:
@@ -161,6 +164,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
                                     etLastName.getText().toString(), age,
                                     Integer.valueOf(etBirthYear.getText().toString()),
                                     Double.valueOf(etMonthlySalary.getText().toString()),
+                                    rate,
                                     Integer.valueOf(etNumber.getText().toString()), car));
                     }
                 }

@@ -15,8 +15,8 @@ public class Manager extends Employee {
         gain_factor_travel = 100;
     }
 
-    public Manager(int employeeId, String firstName, String lastName, int age, int birthYear, double monthlySalary, int nbClients, Vehicle vehicleId) {
-        super(employeeId, firstName, lastName, age, birthYear, monthlySalary, vehicleId);
+    public Manager(int employeeId, String firstName, String lastName, int age, int birthYear, double monthlySalary, int rate, int nbClients, Vehicle vehicleId) {
+        super(employeeId, firstName, lastName, age, birthYear, monthlySalary, rate, vehicleId);
         this.nbClients = nbClients;
     }
 
