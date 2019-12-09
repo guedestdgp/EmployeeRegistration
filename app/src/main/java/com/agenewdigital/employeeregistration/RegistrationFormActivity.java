@@ -33,6 +33,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
     String[] strings_employeesTypes;
     private String message;
     private boolean isCar = true;
+    private boolean isSideCar = true;
 
     Spinner employeeType;
     TableRow row_employee_type;
@@ -79,36 +80,6 @@ public class RegistrationFormActivity extends AppCompatActivity {
         row_employee_type = findViewById(R.id.row_emplyee_type);
         txtNumber = findViewById(R.id.txtNumber);
 
-        /* Spinner of employee type */
-        employeeType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String type = strings_employeesTypes[position];
-                if (type.equals(getResources().getString(R.string.chooseType))) {
-                    row_employee_type.setVisibility(View.GONE);
-                    profession = Profession.None;
-                }
-                else if (type.equals(getResources().getString(R.string.manager))) {
-                    row_employee_type.setVisibility(View.VISIBLE);
-                    txtNumber.setText(getResources().getString(R.string.number_clients));
-                    profession = Profession.Manager;
-                }  else if (type.equals(getResources().getString(R.string.programmer))){
-                    row_employee_type.setVisibility(View.VISIBLE);
-                    txtNumber.setText(getResources().getString(R.string.number_projects));
-                    profession = Profession.Programmer;
-                } else {
-                    row_employee_type.setVisibility(View.VISIBLE);
-                    txtNumber.setText(getResources().getString(R.string.number_bugs));
-                    profession = Profession.Tester;
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
         /* Setting id's */
         etFirstName = findViewById(R.id.firstName);
         etLastName = findViewById(R.id.lastName);
@@ -136,6 +107,8 @@ public class RegistrationFormActivity extends AppCompatActivity {
 
             }
         });
+
+        changeSpinnerEmployee();
     }
 
     public void setData() {
@@ -146,19 +119,17 @@ public class RegistrationFormActivity extends AppCompatActivity {
             vehicle = new Car(etVehicleModel.getText().toString(),
                     etPlateNumber.getText().toString(),
                     spChoseColor.getSelectedItem().toString(),
-                    "car",
                     etCarType.getText().toString());
         } else {
             //(String make, String plate, String color, String category, Boolean sidecar)
-//            vehicle = new Motorcycle(
-//                    etma
-//                    etPlateNumber.getText().toString(),
-//                    spChoseColor.getSelectedItem().toString(),
-//                    "motorcycle",
-//                    etCarType.getText().toString());
+            vehicle = new Motorcycle(
+                    etVehicleModel.getText().toString(),
+                    etPlateNumber.getText().toString(),
+                    spChoseColor.getSelectedItem().toString(),
+                    isSideCar);
         }
-        Car car = null;
-        Profession employee = null;
+
+        /* Employee */
         int age = Calendar.YEAR / Integer.valueOf(etBirthYear.getText().toString());
         int rate = etOccupationRate.getText().toString().isEmpty() ? 100 : Integer.valueOf(etOccupationRate.getText().toString());
         /* Manager
@@ -173,7 +144,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
                         Integer.valueOf(etBirthYear.getText().toString()),
                         Double.valueOf(etMonthlySalary.getText().toString()),
                         rate,
-                        Integer.valueOf(etNumber.getText().toString()), car));
+                        Integer.valueOf(etNumber.getText().toString()), vehicle));
                 break;
             case Programmer:
                 employees.add(new Programmer(Integer.valueOf(etEmployeeId.getText().toString()),
@@ -182,7 +153,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
                         Integer.valueOf(etBirthYear.getText().toString()),
                         Double.valueOf(etMonthlySalary.getText().toString()),
                         rate,
-                        Integer.valueOf(etNumber.getText().toString()), car));
+                        Integer.valueOf(etNumber.getText().toString()), vehicle));
                 break;
             case Tester:
                 employees.add(new Tester(Integer.valueOf(etEmployeeId.getText().toString()),
@@ -191,7 +162,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
                         Integer.valueOf(etBirthYear.getText().toString()),
                         Double.valueOf(etMonthlySalary.getText().toString()),
                         rate,
-                        Integer.valueOf(etNumber.getText().toString()), car));
+                        Integer.valueOf(etNumber.getText().toString()), vehicle));
         }
     }
 
@@ -246,5 +217,50 @@ public class RegistrationFormActivity extends AppCompatActivity {
                 rowMotorbike.setVisibility(View.VISIBLE);
                 rowCar.setVisibility(View.GONE);
         }
+    }
+
+    public void checkSidecar(View view) {
+          RadioGroup radioGroup = findViewById(R.id.rg_sidecar);
+          int id = radioGroup.getCheckedRadioButtonId();
+          switch (id) {
+              case R.id.rb_yes:
+                  isSideCar = true;
+                  break;
+              case R.id.rb_no:
+                  isSideCar = false;
+          }
+    }
+
+    public void changeSpinnerEmployee() {
+
+        /* Spinner of employee type */
+        employeeType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String type = strings_employeesTypes[position];
+                if (type.equals(getResources().getString(R.string.chooseType))) {
+                    row_employee_type.setVisibility(View.GONE);
+                    profession = Profession.None;
+                }
+                else if (type.equals(getResources().getString(R.string.manager))) {
+                    row_employee_type.setVisibility(View.VISIBLE);
+                    txtNumber.setText(getResources().getString(R.string.number_clients));
+                    profession = Profession.Manager;
+                }  else if (type.equals(getResources().getString(R.string.programmer))){
+                    row_employee_type.setVisibility(View.VISIBLE);
+                    txtNumber.setText(getResources().getString(R.string.number_projects));
+                    profession = Profession.Programmer;
+                } else {
+                    row_employee_type.setVisibility(View.VISIBLE);
+                    txtNumber.setText(getResources().getString(R.string.number_bugs));
+                    profession = Profession.Tester;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 }
