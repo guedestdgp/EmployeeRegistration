@@ -2,6 +2,7 @@ package com.agenewdigital.employeeregistration;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -102,8 +103,12 @@ public class RegistrationFormActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isEmptyField())
                     Toast.makeText(RegistrationFormActivity.this, message, Toast.LENGTH_LONG).show();
-                else
+                else {
                     setData();
+                    Intent intent = new Intent(RegistrationFormActivity.this, ResultDescriptionActivity.class);
+                    intent.putExtra("Employee", employees);
+                    startActivity(intent);
+                }
 
             }
         });
