@@ -8,7 +8,7 @@ public abstract class Employee {
     private int birthYear;
     private double monthlySalary;
     private int rate;
-    private Vehicle vehicleId;
+    private Vehicle vehicle;
 
     abstract void toDisplay();
 
@@ -19,7 +19,7 @@ public abstract class Employee {
         this.age = age;
         this.birthYear = birthYear;
         this.monthlySalary = monthlySalary;
-        this.vehicleId = vehicleId;
+        this.vehicle = vehicleId;
         rate = setRate(rate);
     }
 

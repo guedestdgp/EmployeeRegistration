@@ -1,14 +1,12 @@
 package classes;
 
-abstract class Vehicle {
-    private int vehicleId;
+public abstract class Vehicle {
     private String make;
     private String plate;
     private String color;
     private String category;
 
-    Vehicle(int vehicleId, String make, String plate, String color, String category) {
-        this.vehicleId = vehicleId;
+    Vehicle(String make, String plate, String color, String category) {
         this.make = make;
         this.plate = plate;
         this.color = color;

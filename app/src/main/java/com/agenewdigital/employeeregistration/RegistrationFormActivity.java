@@ -15,14 +15,15 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 import classes.Car;
 import classes.Employee;
 import Enums.Profession;
 import classes.Manager;
+import classes.Motorcycle;
 import classes.Programmer;
 import classes.Tester;
+import classes.Vehicle;
 
 /*--- Tatiane's Project - C0755772 ---*/
 public class RegistrationFormActivity extends AppCompatActivity {
@@ -36,7 +37,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
     Spinner employeeType;
     TableRow row_employee_type;
     TextView txtNumber;
-    Profession profetion;
+    Profession profession;
 
     /*
     * Fields to save data
@@ -49,7 +50,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
     EditText etEmployeeId;
     //Spinner was set before.
     EditText etNumber;
-    RadioGroup radioGroup;
+    //RadioGroup was set before.
     //RadioGroup Vehicle Chose and Motorcycle Type.
     EditText etCarType;
     EditText etVehicleModel;
@@ -85,20 +86,20 @@ public class RegistrationFormActivity extends AppCompatActivity {
                 String type = strings_employeesTypes[position];
                 if (type.equals(getResources().getString(R.string.chooseType))) {
                     row_employee_type.setVisibility(View.GONE);
-                    profetion = Profession.None;
+                    profession = Profession.None;
                 }
                 else if (type.equals(getResources().getString(R.string.manager))) {
                     row_employee_type.setVisibility(View.VISIBLE);
                     txtNumber.setText(getResources().getString(R.string.number_clients));
-                    profetion = Profession.Manager;
+                    profession = Profession.Manager;
                 }  else if (type.equals(getResources().getString(R.string.programmer))){
                     row_employee_type.setVisibility(View.VISIBLE);
                     txtNumber.setText(getResources().getString(R.string.number_projects));
-                    profetion = Profession.Programmer;
+                    profession = Profession.Programmer;
                 } else {
                     row_employee_type.setVisibility(View.VISIBLE);
                     txtNumber.setText(getResources().getString(R.string.number_bugs));
-                    profetion = Profession.Tester;
+                    profession = Profession.Tester;
                 }
             }
 
@@ -138,6 +139,24 @@ public class RegistrationFormActivity extends AppCompatActivity {
     }
 
     public void setData() {
+        Vehicle vehicle;
+        /* Check if is car or motorcycle and add to the correct class */
+        if (isCar){
+            //(String make, String plate, String color, String category, String type)
+            vehicle = new Car(etVehicleModel.getText().toString(),
+                    etPlateNumber.getText().toString(),
+                    spChoseColor.getSelectedItem().toString(),
+                    "car",
+                    etCarType.getText().toString());
+        } else {
+            //(String make, String plate, String color, String category, Boolean sidecar)
+//            vehicle = new Motorcycle(
+//                    etma
+//                    etPlateNumber.getText().toString(),
+//                    spChoseColor.getSelectedItem().toString(),
+//                    "motorcycle",
+//                    etCarType.getText().toString());
+        }
         Car car = null;
         Profession employee = null;
         int age = Calendar.YEAR / Integer.valueOf(etBirthYear.getText().toString());
@@ -146,7 +165,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
          * int employeeId, String firstName, String lastName, int age, int birthYear,
          * double monthlySalary, int rate, int nbClients, Vehicle vehicleId
          * */
-        switch (profetion) {
+        switch (profession) {
             case Manager:
                 employees.add(new Manager(Integer.valueOf(etEmployeeId.getText().toString()),
                         etFirstName.getText().toString(),
@@ -193,7 +212,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
             message = "Provide Employee ID";
             return true;
         } else if (etNumber.getText().toString().isEmpty()) {
-            message = "Provide " + profetion;
+            message = "Provide " + profession;
             return true;
         } else if (etCarType.getText().toString().isEmpty()) {
             message = "Provide Car Type";
