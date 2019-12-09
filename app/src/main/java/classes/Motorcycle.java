@@ -12,7 +12,7 @@ public class Motorcycle extends Vehicle implements Serializable {
 
     @Override
     public String toDisplay() {
-        return null;
+        return String.format("motorcycle\n - Model: %s\n - Plate: %s\n - Color: %s\n - %sa sidecar", this.getMake(), this.getPlate(), this.getColor(), this.getSidecar() ? "with" : "without");
     }
 
     public Boolean getSidecar() {
