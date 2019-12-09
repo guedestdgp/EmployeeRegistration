@@ -341,6 +341,7 @@
                         android:id="@+id/rb_no"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="true"
                         android:onClick="checkSidecar"
                         android:text="@string/no" />
                 </RadioGroup>

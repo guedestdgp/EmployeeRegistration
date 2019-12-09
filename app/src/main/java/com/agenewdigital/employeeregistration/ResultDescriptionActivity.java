@@ -22,9 +22,9 @@ public class ResultDescriptionActivity extends AppCompatActivity {
         /*-- Hide the actionbar, when show the title --*/
         getSupportActionBar().hide();
 
-        employees = (ArrayList<Employee>) getIntent().getSerializableExtra("Employees");
-
-        employee = employees.get(employees.size()-1);
+//        employees = (ArrayList<Employee>) getIntent().getSerializableExtra("employees");
+//
+//        employee = employees.get(employees.size()-1);
 
     }
 }

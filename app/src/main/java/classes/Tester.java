@@ -1,6 +1,8 @@
 package classes;
 
-public class Tester extends Employee {
+import java.io.Serializable;
+
+public class Tester extends Employee implements Serializable {
     private int nbBugs;
 
     private final int gain_factor_error;

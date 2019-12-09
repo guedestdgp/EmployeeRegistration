@@ -1,6 +1,8 @@
 package classes;
 
-public abstract class Vehicle {
+import java.io.Serializable;
+
+public abstract class Vehicle implements Serializable {
     private String make;
     private String plate;
     private String color;

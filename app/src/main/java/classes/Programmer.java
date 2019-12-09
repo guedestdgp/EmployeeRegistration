@@ -1,6 +1,8 @@
 package classes;
 
-public class Programmer extends Employee {
+import java.io.Serializable;
+
+public class Programmer extends Employee implements Serializable {
     private int nbProjects;
 
     private final int gain_factor_project;

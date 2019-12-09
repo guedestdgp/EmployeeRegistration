@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -30,11 +31,11 @@ import classes.Vehicle;
 public class RegistrationFormActivity extends AppCompatActivity {
 
     /* Locals */
-    private static ArrayList<Employee> employees = new ArrayList<>();
+    private ArrayList<Employee> employees = new ArrayList<>();
     String[] strings_employeesTypes;
     private String message;
     private boolean isCar = true;
-    private boolean isSideCar = true;
+    private boolean isSideCar;
 
     Spinner employeeType;
     TableRow row_employee_type;
@@ -106,8 +107,13 @@ public class RegistrationFormActivity extends AppCompatActivity {
                 else {
                     setData();
                     Intent intent = new Intent(RegistrationFormActivity.this, ResultDescriptionActivity.class);
-                    intent.putExtra("Employee", employees);
-                    startActivity(intent);
+                    intent.putExtra("employees", employees);
+                    try {
+                        startActivity(intent);
+                    }catch (Exception e) {
+                        Log.i("employee_error", "onClick: "+e);
+                    }
+
                 }
 
             }
@@ -190,7 +196,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
         } else if (etNumber.getText().toString().isEmpty()) {
             message = "Provide " + profession;
             return true;
-        } else if (etCarType.getText().toString().isEmpty()) {
+        } else if (isCar && etCarType.getText().toString().isEmpty()) {
             message = "Provide Car Type";
             return true;
         } else if (etVehicleModel.getText().toString().isEmpty()) {

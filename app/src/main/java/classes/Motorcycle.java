@@ -1,6 +1,8 @@
 package classes;
 
-public class Motorcycle extends Vehicle {
+import java.io.Serializable;
+
+public class Motorcycle extends Vehicle implements Serializable {
     private Boolean sidecar;
 
     public Motorcycle(String make, String plate, String color, Boolean sidecar) {

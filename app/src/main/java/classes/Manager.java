@@ -1,6 +1,8 @@
 package classes;
 
-public class Manager extends Employee {
+import java.io.Serializable;
+
+public class Manager extends Employee implements Serializable {
     private int nbClients;
 
     private final int gain_factor_client;
