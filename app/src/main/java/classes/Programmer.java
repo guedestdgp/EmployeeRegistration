@@ -19,7 +19,7 @@ public class Programmer extends Employee implements Serializable {
 
     @Override
     public String toDisplay() {
-        return MessageFormat.format("Name: {0} {1}, a Programmer\nAge: {2}\nEmployee has a {3}\nOccupation rate: {4}%\nAnnual income: {5}\nHe/She has completed {6} projects", this.getFirstName(), this.getLastName(), this.getAge(), this.getVehicle().toDisplay(), this.getRate(), this.annualIncome(), this.nbProjects);
+        return String.format("Name: %s %s, a Programmer\nAge: %d\nEmployee has a %s\nOccupation rate: %d%%\nAnnual income: $%.2f\nHe/She has completed %d projects", this.getFirstName(), this.getLastName(), this.getAge(), this.getVehicle().toDisplay(), this.getRate(), this.annualIncome(), this.nbProjects);
     }
 
     @Override
@@ -27,11 +27,9 @@ public class Programmer extends Employee implements Serializable {
         //Making annual
         double income = this.getMonthlySalary() * 12;
         //Multiply by rate
-        income *= (this.getRate() / 100);
-        //$500 per client
+        income *= (this.getRate() / 100.0);
+        //$200 per project
         income += (gain_factor_project * this.nbProjects);
-        //I found nothing in the documentation how to get the days traveled.
-        //gain_factor_travel
         return income;
     }
 
