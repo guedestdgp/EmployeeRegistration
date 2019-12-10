@@ -12,6 +12,6 @@ public class Car extends Vehicle implements Serializable {
 
     @Override
     public String toDisplay() {
-        return null;
+        return String.format("car\n - Model: %s\n - Plate: %s\n - Color: %s\n - type: %s", this.getMake(), this.getPlate(), this.getColor(), this.type);
     }
 }

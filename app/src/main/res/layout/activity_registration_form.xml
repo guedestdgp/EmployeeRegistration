@@ -70,6 +70,7 @@
                     android:layout_weight="1"
                     android:background="#ddd"
                     android:hint="@string/first_name"
+                    android:inputType="textPersonName"
                     android:padding="4dp" />
             </TableRow>
 
@@ -94,6 +95,7 @@
                     android:layout_weight="1"
                     android:background="#ddd"
                     android:hint="@string/last_name"
+                    android:inputType="textPersonName"
                     android:padding="4dp" />
             </TableRow>
 
@@ -308,7 +310,7 @@
                     android:layout_weight="1"
                     android:background="#ddd"
                     android:hint="@string/car_type"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:padding="4dp" />
             </TableRow>
 
@@ -371,6 +373,7 @@
                     android:layout_weight="1"
                     android:background="#ddd"
                     android:hint="@string/model"
+                    android:inputType="text"
                     android:padding="4dp" />
             </TableRow>
 
@@ -395,6 +398,7 @@
                     android:layout_weight="1"
                     android:background="#ddd"
                     android:hint="@string/plate_number"
+                    android:inputType="text"
                     android:padding="4dp" />
             </TableRow>
 
