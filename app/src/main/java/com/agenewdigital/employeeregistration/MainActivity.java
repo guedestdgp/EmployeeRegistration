@@ -1,5 +1,6 @@
 package com.agenewdigital.employeeregistration;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -41,9 +42,14 @@ public class MainActivity extends AppCompatActivity {
 
         /* ListView */
         ListView listView = findViewById(R.id.listView);
-        final ArrayAdapter<Employee> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, employees);
-        listView.setAdapter(arrayAdapter);
-        arrayAdapter.notifyDataSetChanged();
+        EmployeeAdapter employeeAdapter = new EmployeeAdapter(MainActivity.this, R.layout.emplyee_layout, employees);
+        listView.setAdapter(employeeAdapter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
     }
 }
 

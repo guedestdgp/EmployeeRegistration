@@ -72,5 +72,7 @@
     <string name="employee_fist_name">Employee Fist Name</string>
     <string name="registration_form">Registration Form</string>
     <string name="add">ADD</string>
+    <string name="name">Name:</string>
+    <string name="id">Id:</string>
 
 </resources>
