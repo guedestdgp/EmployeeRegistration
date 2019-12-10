@@ -24,11 +24,11 @@ public class Tester extends Employee implements Serializable {
 
     @Override
     double annualIncome() {
-        //Making annual
+        /* Making annual */
         double income = this.getMonthlySalary() * 12;
-        //Multiply by rate
+        /* Multiply by rate */
         income *= (this.getRate() / 100.0);
-        //$10 per bug
+        /* $10 per bug */
         income += (getGain_factor_error() * this.getNbBugs());
         return income;
     }

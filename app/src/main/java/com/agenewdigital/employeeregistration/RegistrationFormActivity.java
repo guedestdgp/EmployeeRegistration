@@ -98,12 +98,19 @@ public class RegistrationFormActivity extends AppCompatActivity {
         spChoseColor = findViewById(R.id.spinner_color);
         btRegister = findViewById(R.id.btRegister);
 
+        /* Getting employees from intent */
+        if (getIntent().getExtras() != null) {
+            employees = (ArrayList<Employee>) getIntent().getSerializableExtra("employee");
+        }
+
         btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isEmptyField())
                     Toast.makeText(RegistrationFormActivity.this, message, Toast.LENGTH_LONG).show();
-                else {
+                else if (!isUniqueId()) {
+                    Toast.makeText(RegistrationFormActivity.this, "The Employee ID must be unique.", Toast.LENGTH_LONG).show();
+                } else {
                     setData();
                     Intent intent = new Intent(RegistrationFormActivity.this, ResultDescriptionActivity.class);
                     intent.putExtra("employees", employees);
@@ -119,6 +126,14 @@ public class RegistrationFormActivity extends AppCompatActivity {
         });
 
         changeSpinnerEmployee();
+    }
+
+    private boolean isUniqueId() {
+        for (Employee employee : employees) {
+            if (employee.getEmployeeId() == Integer.valueOf(etEmployeeId.getText().toString()))
+                return false;
+        }
+        return true;
     }
 
     public void setData() {

@@ -29,14 +29,14 @@ public class Manager extends Employee implements Serializable {
 
     @Override
     double annualIncome() {
-        //Making annual
+        /* Making annual */
         double income = this.getMonthlySalary() * 12;
-        //Multiply by rate
+        /* Multiply by rate */
         income *= (this.getRate() / 100.0);
-        //$500 per client
+        /* $500 per client */
         income += (gain_factor_client * this.nbClients);
-        //I found nothing in the documentation how to get the days traveled.
-        //gain_factor_travel
+        /* I found nothing in the documentation how to get the days traveled.
+        * gain_factor_travel */
         return income;
     }
 }

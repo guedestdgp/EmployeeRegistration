@@ -24,11 +24,11 @@ public class Programmer extends Employee implements Serializable {
 
     @Override
     double annualIncome() {
-        //Making annual
+        /* Making annual */
         double income = this.getMonthlySalary() * 12;
-        //Multiply by rate
+        /* Multiply by rate */
         income *= (this.getRate() / 100.0);
-        //$200 per project
+        /* $200 per project */
         income += (gain_factor_project * this.nbProjects);
         return income;
     }
