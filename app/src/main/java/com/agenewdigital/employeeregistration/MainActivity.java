@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /* Get Employee from intent */
+        if (getIntent().getExtras() != null) {
+            employees = (ArrayList<Employee>) getIntent().getSerializableExtra("employee");
+        }
+
         /* ListView */
         ListView listView = findViewById(R.id.listView);
         EmployeeAdapter employeeAdapter = new EmployeeAdapter(MainActivity.this, R.layout.emplyee_layout, employees);
