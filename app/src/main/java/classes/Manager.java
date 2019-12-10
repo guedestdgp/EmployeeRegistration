@@ -24,7 +24,7 @@ public class Manager extends Employee implements Serializable {
 
     @Override
     public String toDisplay() {
-        return null;
+        return String.format("Name: %s %sa Manager\nAge: %d\nEmployee has a %s\nOccupation rate: %d%%\nAnnual income: %d\nHe/She has brought %d new clients", this.getFirstName(), this.getLastName(), this.getAge(), this.getVehicle().toDisplay(), this.getRate(), annualIncome(), this.nbClients);
     }
 
     public int getGain_factor_travel() {
