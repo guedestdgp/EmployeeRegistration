@@ -1,7 +1,10 @@
 package classes;
 
+import android.widget.AdapterView;
+
 import java.io.Serializable;
 import java.time.Period;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public abstract class Employee implements Serializable {
@@ -46,6 +49,8 @@ public abstract class Employee implements Serializable {
         this.vehicle = vehicleId;
         rate = setRate(rate);
     }
+
+    public static ArrayList<Employee> employees;
 
     public int setRate(int rate) {
         if (rate < 10)
