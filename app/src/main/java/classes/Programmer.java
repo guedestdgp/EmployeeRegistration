@@ -1,6 +1,7 @@
 package classes;
 
 import java.io.Serializable;
+import java.text.MessageFormat;
 
 public class Programmer extends Employee implements Serializable {
     private int nbProjects;
@@ -18,7 +19,7 @@ public class Programmer extends Employee implements Serializable {
 
     @Override
     public String toDisplay() {
-        return null;
+        return MessageFormat.format("Name: {0} {1}, a Programmer\nAge: {2}\nEmployee has a {3}\nOccupation rate: {4}%\nAnnual income: {5}\nHe/She has completed {6} projects", this.getFirstName(), this.getLastName(), this.getAge(), this.getVehicle().toDisplay(), this.getRate(), annualIncome(), this.nbProjects);
     }
 
     public int getGain_factor_project() {
