@@ -1,9 +1,6 @@
 package classes;
 
-import android.widget.AdapterView;
-
 import java.io.Serializable;
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -66,11 +63,10 @@ public abstract class Employee implements Serializable {
         return Calendar.getInstance().get(Calendar.YEAR) - birthYear;
     }
 
-    protected int annualIncome(){
-        /*--- Yearly income computed as 12 times the monthly income
+
+    /*--- Yearly income computed as 12 times the monthly income
         multiplied by the occupation rate. ---*/
-        return 0;
-    }
+    abstract double annualIncome();
 
     public String getFirstName() {
         return firstName;
