@@ -17,8 +17,8 @@ public class Manager extends Employee implements Serializable {
         gain_factor_travel = 100;
     }
 
-    public Manager(int employeeId, String firstName, String lastName, int age, int birthYear, double monthlySalary, int rate, int nbClients, Vehicle vehicle) {
-        super(employeeId, firstName, lastName, age, birthYear, monthlySalary, rate, vehicle);
+    public Manager(int employeeId, String firstName, String lastName, int birthYear, double monthlySalary, int rate, int nbClients, Vehicle vehicle) {
+        super(employeeId, firstName, lastName, birthYear, monthlySalary, rate, vehicle);
         this.nbClients = nbClients;
     }
 

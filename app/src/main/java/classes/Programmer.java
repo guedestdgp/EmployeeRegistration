@@ -11,8 +11,8 @@ public class Programmer extends Employee implements Serializable {
         gain_factor_project = 200;
     }
 
-    public Programmer(int employeeId, String firstName, String lastName, int age, int birthYear, double monthlySalary, int rate, int nbProjects, Vehicle vehicle) {
-        super(employeeId, firstName, lastName, age, birthYear, monthlySalary, rate, vehicle);
+    public Programmer(int employeeId, String firstName, String lastName, int birthYear, double monthlySalary, int rate, int nbProjects, Vehicle vehicle) {
+        super(employeeId, firstName, lastName, birthYear, monthlySalary, rate, vehicle);
         this.nbProjects = nbProjects;
     }
 

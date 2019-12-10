@@ -11,8 +11,8 @@ public class Tester extends Employee implements Serializable {
         gain_factor_error = 10;
     }
 
-    public Tester(int employeeId, String firstName, String lastName, int age, int birthYear, double monthlySalary, int rate, int nbBugs, Vehicle vehicle) {
-        super(employeeId, firstName, lastName, age, birthYear, monthlySalary, rate, vehicle);
+    public Tester(int employeeId, String firstName, String lastName, int birthYear, double monthlySalary, int rate, int nbBugs, Vehicle vehicle) {
+        super(employeeId, firstName, lastName, birthYear, monthlySalary, rate, vehicle);
         this.nbBugs = nbBugs;
     }
 

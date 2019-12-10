@@ -118,6 +118,7 @@
                     android:layout_weight="1"
                     android:background="#ddd"
                     android:hint="@string/birth_year"
+                    android:inputType="number"
                     android:padding="4dp" />
             </TableRow>
 
@@ -142,6 +143,7 @@
                     android:layout_weight="1"
                     android:background="#ddd"
                     android:hint="@string/monthly_salary"
+                    android:inputType="number"
                     android:padding="4dp" />
             </TableRow>
 
@@ -166,6 +168,7 @@
                     android:layout_weight="1"
                     android:background="#ddd"
                     android:hint="@string/occupation_rate"
+                    android:inputType="number"
                     android:padding="4dp" />
             </TableRow>
 

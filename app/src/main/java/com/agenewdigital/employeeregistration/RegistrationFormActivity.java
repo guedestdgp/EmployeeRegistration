@@ -141,7 +141,6 @@ public class RegistrationFormActivity extends AppCompatActivity {
         }
 
         /* Employee */
-        int age = Calendar.YEAR / Integer.valueOf(etBirthYear.getText().toString());
         int rate = etOccupationRate.getText().toString().isEmpty() ? 100 : Integer.valueOf(etOccupationRate.getText().toString());
         /* Manager
          * int employeeId, String firstName, String lastName, int age, int birthYear,
@@ -151,7 +150,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
             case Manager:
                 employees.add(new Manager(Integer.valueOf(etEmployeeId.getText().toString()),
                         etFirstName.getText().toString(),
-                        etLastName.getText().toString(), age,
+                        etLastName.getText().toString(),
                         Integer.valueOf(etBirthYear.getText().toString()),
                         Double.valueOf(etMonthlySalary.getText().toString()),
                         rate,
@@ -160,7 +159,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
             case Programmer:
                 employees.add(new Programmer(Integer.valueOf(etEmployeeId.getText().toString()),
                         etFirstName.getText().toString(),
-                        etLastName.getText().toString(), age,
+                        etLastName.getText().toString(),
                         Integer.valueOf(etBirthYear.getText().toString()),
                         Double.valueOf(etMonthlySalary.getText().toString()),
                         rate,
@@ -169,7 +168,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
             case Tester:
                 employees.add(new Tester(Integer.valueOf(etEmployeeId.getText().toString()),
                         etFirstName.getText().toString(),
-                        etLastName.getText().toString(), age,
+                        etLastName.getText().toString(),
                         Integer.valueOf(etBirthYear.getText().toString()),
                         Double.valueOf(etMonthlySalary.getText().toString()),
                         rate,

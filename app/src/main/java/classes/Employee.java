@@ -1,6 +1,8 @@
 package classes;
 
 import java.io.Serializable;
+import java.time.Period;
+import java.util.Calendar;
 
 public abstract class Employee implements Serializable {
     private int employeeId;
@@ -34,11 +36,11 @@ public abstract class Employee implements Serializable {
 
     public abstract String toDisplay();
 
-    protected Employee(int employeeId, String firstName, String lastName, int age, int birthYear, double monthlySalary, int rate, Vehicle vehicleId) {
+    protected Employee(int employeeId, String firstName, String lastName, int birthYear, double monthlySalary, int rate, Vehicle vehicleId) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        this.age = setAge(birthYear);
         this.birthYear = birthYear;
         this.monthlySalary = monthlySalary;
         this.vehicle = vehicleId;
@@ -53,6 +55,10 @@ public abstract class Employee implements Serializable {
         else
             this.rate = rate;
         return rate;
+    }
+
+    public int setAge(int birthYear) {
+        return Calendar.getInstance().get(Calendar.YEAR) - birthYear;
     }
 
     protected int annualIncome(){
