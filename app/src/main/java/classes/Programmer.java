@@ -24,7 +24,15 @@ public class Programmer extends Employee implements Serializable {
 
     @Override
     double annualIncome() {
-        return 0;
+        //Making annual
+        double income = this.getMonthlySalary() * 12;
+        //Multiply by rate
+        income *= (this.getRate() / 100);
+        //$500 per client
+        income += (gain_factor_project * this.nbProjects);
+        //I found nothing in the documentation how to get the days traveled.
+        //gain_factor_travel
+        return income;
     }
 
     public int getGain_factor_project() {
