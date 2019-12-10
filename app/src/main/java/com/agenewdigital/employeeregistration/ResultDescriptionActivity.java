@@ -2,6 +2,7 @@ package com.agenewdigital.employeeregistration;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -34,5 +35,13 @@ public class ResultDescriptionActivity extends AppCompatActivity {
 
         textView.setText(employee.toDisplay());
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(ResultDescriptionActivity.this, MainActivity.class);
+        intent.putExtra("employee", employees);
+        startActivity(intent);
     }
 }
