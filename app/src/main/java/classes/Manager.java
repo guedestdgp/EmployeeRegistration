@@ -24,7 +24,7 @@ public class Manager extends Employee implements Serializable {
 
     @Override
     public String toDisplay() {
-        return String.format("Name: %s %s, a Manager\nAge: %d\nEmployee has a %s\nOccupation rate: %d%%\nAnnual income: %d\nHe/She has brought %d new clients", this.getFirstName(), this.getLastName(), this.getAge(), this.getVehicle().toDisplay(), this.getRate(), this.annualIncome(), this.nbClients);
+        return String.format("Name: %s %s, a Manager\nAge: %d\nEmployee has a %s\nOccupation rate: %d%%\nAnnual income: %.2f\nHe/She has brought %d new clients", this.getFirstName(), this.getLastName(), this.getAge(), this.getVehicle().toDisplay(), this.getRate(), this.annualIncome(), this.nbClients);
     }
 
     @Override
