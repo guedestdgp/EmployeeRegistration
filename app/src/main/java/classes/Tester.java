@@ -1,6 +1,7 @@
 package classes;
 
 import java.io.Serializable;
+import java.text.MessageFormat;
 
 public class Tester extends Employee implements Serializable {
     private int nbBugs;
@@ -18,7 +19,7 @@ public class Tester extends Employee implements Serializable {
 
     @Override
     public String toDisplay() {
-        return String.format("Name: %s %s, a Tester\nAge: %d\nEmployee has a %s\nOccupation rate: %d %\nAnnual income: %d\nHe/She has corrected %d bugs", this.getFirstName(), this.getLastName(), this.getAge(), this.getVehicle().toDisplay(), this.getRate(), annualIncome(), this.getNbBugs());
+        return MessageFormat.format("Name: {0} {1}, a Tester\nAge: {2}\nEmployee has a {3}\nOccupation rate: {4}%\nAnnual income: {5}\nHe/She has corrected {6} bugs", this.getFirstName(), this.getLastName(), this.getAge(), this.getVehicle().toDisplay(), this.getRate(), annualIncome(), this.getNbBugs());
     }
 
     public int getGain_factor_error() {
