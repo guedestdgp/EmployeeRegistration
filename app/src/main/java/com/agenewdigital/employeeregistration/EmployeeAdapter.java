@@ -24,6 +24,8 @@ public class EmployeeAdapter extends ArrayAdapter implements Filterable {
     private final LayoutInflater layoutInflater;
     private final int layoutResource;
 
+    public List<Employee> getEmployees() { return employees; }
+
     public Filter getFilter() {
         return new Filter() {
 

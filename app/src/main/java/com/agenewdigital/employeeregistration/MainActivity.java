@@ -64,9 +64,10 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                ArrayAdapter<Employee> newListEmployee = ((EmployeeAdapter)((ListView)parent).FixedViewInfo).employees;
                 Intent intent = new Intent(MainActivity.this, ResultDescriptionActivity.class);
 //                intent.putExtra("employees", employees);
-                intent.putExtra("employee", employees.get(position));
+                intent.putExtra("employee", employeeAdapter.getEmployees().get(position));
                 startActivity(intent);
             }
         });
