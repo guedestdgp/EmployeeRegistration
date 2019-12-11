@@ -41,10 +41,13 @@ public class EmployeeAdapter extends ArrayAdapter {
         TextView nameText = v.findViewById(R.id.name);
         TextView idText = v.findViewById(R.id.id);
 
-        String name = "Name: "+employees.get(position).getFirstName()+" "+employees.get(position).getLastName();
+        String name = "Name:   "+
+                employees.get(position).getFirstName()+
+                " "+employees.get(position).getLastName();
         nameText.setText(name);
 
-        String id = "Id: "+String.valueOf(employees.get(position).getEmployeeId());
+        String id = "Id:   "+
+                String.valueOf(employees.get(position).getEmployeeId());
         idText.setText(id);
 
         return v;
