@@ -115,14 +115,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
                     Toast.makeText(RegistrationFormActivity.this, "Provide a valid birth year", Toast.LENGTH_LONG).show();
                 else {
                     setData();
-                    Intent intent = new Intent(RegistrationFormActivity.this, ResultDescriptionActivity.class);
-                    intent.putExtra("employees", employees);
-                    try {
-                        startActivity(intent);
-                    }catch (Exception e) {
-                        Log.i("employee_error", "onClick: "+e);
-                    }
-
+                    onBackPressed();
                 }
 
             }
@@ -296,8 +289,14 @@ public class RegistrationFormActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-        finish();
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(RegistrationFormActivity.this, MainActivity.class);
+        intent.putExtra("employees", employees);
+        try {
+            startActivity(intent);
+        }catch (Exception e) {
+            Log.i("employee_error", "onClick: "+e);
+        }
     }
 }

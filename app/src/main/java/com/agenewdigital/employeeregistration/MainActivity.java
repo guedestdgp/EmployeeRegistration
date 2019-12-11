@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -43,19 +45,24 @@ public class MainActivity extends AppCompatActivity {
 
         /* Get Employee from intent */
         if (getIntent().getExtras() != null) {
-            employees = (ArrayList<Employee>) getIntent().getSerializableExtra("employee");
+            employees = (ArrayList<Employee>) getIntent().getSerializableExtra("employees");
         }
 
         /* ListView */
         ListView listView = findViewById(R.id.listView);
         EmployeeAdapter employeeAdapter = new EmployeeAdapter(MainActivity.this, R.layout.emplyee_layout, employees);
-        listView.setAdapter(employeeAdapter);
-    }
+        try {
+            listView.setAdapter(employeeAdapter);
+        }catch (Exception e) {
+            Log.i("employee_error", "onClick: "+e);
+        }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        finish();
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
     }
 }
 
