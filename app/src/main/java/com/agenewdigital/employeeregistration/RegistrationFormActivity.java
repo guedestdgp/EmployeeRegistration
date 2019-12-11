@@ -299,4 +299,10 @@ public class RegistrationFormActivity extends AppCompatActivity {
             Log.i("employee_error", "onClick: "+e);
         }
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
+    }
 }

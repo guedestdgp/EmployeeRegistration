@@ -31,8 +31,8 @@ public class ResultDescriptionActivity extends AppCompatActivity {
 
         employees = (ArrayList<Employee>) getIntent().getSerializableExtra("employees");
 //        Profession.Tester
-        employee = employees.get(employees.size()-1);
-
+//        employee = employees.get(employees.size()-1);
+        employee = (Employee) getIntent().getSerializableExtra("employee");
         textView.setText(employee.toDisplay());
 
     }
@@ -40,8 +40,8 @@ public class ResultDescriptionActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(ResultDescriptionActivity.this, MainActivity.class);
-        intent.putExtra("employee", employees);
-        startActivity(intent);
+//        Intent intent = new Intent(ResultDescriptionActivity.this, MainActivity.class);
+//        intent.putExtra("employees", employees);
+//        startActivity(intent);
     }
 }
