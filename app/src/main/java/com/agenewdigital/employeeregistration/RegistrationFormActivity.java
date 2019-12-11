@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import classes.Car;
 import classes.Employee;
@@ -108,9 +109,11 @@ public class RegistrationFormActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isEmptyField())
                     Toast.makeText(RegistrationFormActivity.this, message, Toast.LENGTH_LONG).show();
-                else if (!isUniqueId()) {
+                else if (!isUniqueId())
                     Toast.makeText(RegistrationFormActivity.this, "The Employee ID must be unique.", Toast.LENGTH_LONG).show();
-                } else {
+                else if (!isValidBirthYear())
+                    Toast.makeText(RegistrationFormActivity.this, "Provide a valid birth year", Toast.LENGTH_LONG).show();
+                else {
                     setData();
                     Intent intent = new Intent(RegistrationFormActivity.this, ResultDescriptionActivity.class);
                     intent.putExtra("employees", employees);
@@ -126,6 +129,10 @@ public class RegistrationFormActivity extends AppCompatActivity {
         });
 
         changeSpinnerEmployee();
+    }
+
+    private boolean isValidBirthYear() {
+        return (Integer.valueOf(etBirthYear.getText().toString()) > Calendar.getInstance().get(Calendar.YEAR) || Integer.valueOf(etBirthYear.getText().toString()) < 1900) ? false : true;
     }
 
     private boolean isUniqueId() {
